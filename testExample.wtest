@@ -1,0 +1,19 @@
+import example.*
+
+describe "Juego de cartas 7-1/2" {
+  method crearCarmen() = new Jugador(nombre = "Carmen")
+  method crearSan() = new Jugador(nombre = "San")
+  method crearDiego() = new Jugador(nombre = "Diego")
+
+  test "juegoGeneralCompleto" {
+    const carmen = self.crearCarmen()
+    const san = self.crearSan()
+    const diego = self.crearDiego()
+    banca.registrarJugador(carmen)
+    banca.registrarJugador(san)
+    banca.registrarJugador(diego)
+    banca.crear_y_BarajarCartas()
+    banca.iniciarJuego()
+    assert.printString()
+  }
+}
